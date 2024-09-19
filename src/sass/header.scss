@@ -1,3 +1,22 @@
 .header {
-    color: royalblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    margin: 0px 20px 0px 20px;
+}
+
+.header nav ul {
+    display: flex;
+    list-style-type: none;
+    padding-left: 0;
+    gap: 20px;
+}
+
+.header nav ul a {
+    text-decoration: none;
+
+    &.underline {
+        text-decoration: underline;
+    }
 }
