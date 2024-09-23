@@ -1,4 +1,4 @@
-import Thumb from "../../Thumb";
+import Thumb from "../components/Thumb";
 import annonce from "../../src/datas/annonce.json";
 
 const Home = () => {
