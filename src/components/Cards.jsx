@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-const Thumb = ({ annonce }) => {
+const Cards = ({ annonce }) => {
     return (
         annonce.map((annonce) => (
-            <div className="thumb" key={annonce.id}>
+            <div className="cards" key={annonce.id}>
                 <img src={annonce.cover} alt={annonce.title} />
                 <h3>{annonce.title}</h3>
             </div>
@@ -11,8 +11,8 @@ const Thumb = ({ annonce }) => {
     );
 };
 
-Thumb.prototypes = {
+Cards.prototypes = {
     annonce: PropTypes.array.isRequired
 }
 
-export default Thumb
+export default Cards

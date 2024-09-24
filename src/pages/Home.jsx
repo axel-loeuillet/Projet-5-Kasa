@@ -1,4 +1,4 @@
-import Thumb from "../components/Thumb";
+import Cards from "../components/Cards";
 import annonce from "../../src/datas/annonce.json";
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
                 <img src="./src/assets/images/banner.jpg" alt="Photo montrant une falaise" />
             </div>
             <div className="gallery">
-                <Thumb annonce={annonce} />
+                <Cards annonce={annonce} />
             </div>
         </div>
     )
