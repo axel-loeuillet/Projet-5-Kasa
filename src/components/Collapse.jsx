@@ -1,17 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react';
+import PropTypes from "prop-types";
+
+const Collapse = ({ title, description }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
 
-const Collapse = () => {
+    const toggleCollapse = () => {
+        setIsOpen(!isOpen);
+    };
+
     return (
+        <div className='collapse'>
 
-        <ul>
-            <li>Fiabilité <i className="fa-solid fa-chevron-up"></i></li>
-            <li>Respect <i className="fa-solid fa-chevron-up"></i></li>
-            <li>Service <i className="fa-solid fa-chevron-up"></i></li>
-            <li>Sécurité <i className="fa-solid fa-chevron-up"></i></li>
-        </ul>
+            <div className='collapse-bar'>
+                {title}
 
-    )
+                <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} onClick={toggleCollapse}></i>
+            </div>
+
+            {isOpen && (
+                <div className="collapse-content">
+                    {description}
+                </div>
+            )}
+        </div>
+    );
+};
+
+Collapse.prototypes = {
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired
 }
 
-export default Collapse
+export default Collapse;
