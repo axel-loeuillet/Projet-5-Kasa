@@ -15,7 +15,7 @@ const Collapse = ({ title, description }) => {
             <div className='collapse-bar'>
                 {title}
 
-                <i className={`fa-solid ${isOpen ? 'fa-chevron-up' : 'fa-chevron-down'}`} onClick={toggleCollapse}></i>
+                <i className={`fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}`} onClick={toggleCollapse}></i>
             </div>
 
             {isOpen && (

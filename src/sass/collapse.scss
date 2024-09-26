@@ -42,3 +42,8 @@
     color: black;
     padding: 25px 28px 20px 20px;
 }
+
+.collapse-bar .fa-solid:active {
+    transform: rotate(90deg);
+    transition: transform 80ms ease-in-out;
+}
