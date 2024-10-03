@@ -1,5 +1,5 @@
 import Cards from "../components/Cards";
-import annonce from "../../src/datas/annonce.json";
+import annonce from "../../src/datas/annonces";
 
 const Home = () => {
     return (
@@ -9,7 +9,14 @@ const Home = () => {
                 <img src="./src/assets/images/banner.jpg" alt="Photo montrant une falaise" />
             </div>
             <div className="gallery">
-                <Cards annonce={annonce} />
+                {annonce.map((annonce) => (
+                    <Cards
+                        key={annonce.id}
+                        id={annonce.id}
+                        cover={annonce.cover}
+                        alt={annonce.title}
+                        title={annonce.title} />
+                ))}
             </div>
         </div>
     )
