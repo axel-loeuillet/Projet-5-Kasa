@@ -1,49 +1,47 @@
-import { useParams } from "react-router-dom";
-import annonces from "../datas/annonces.json";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import PropTypes from "prop-types";
 
-const findAnnonceId = (id) => {
-    return annonces.find((annonce) => annonce.id === id);
+
+const StarRating = ({ rating }) => {
+    const renderStars = () => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars.push(<i key={i} className="fa-solid fa-star"></i>);
+            } else {
+                stars.push(<i key={i} className="fa-duotone fa-solid fa-star"></i>);
+            }
+        }
+        return stars;
+    };
+    return <div className="star-rating">{renderStars()}</div>;
+};
+
+
+const Fiche = ({ annonce }) => {
+    return (
+        <div className="info-logement">
+            <div className="title">
+                <h1>{annonce.title}</h1>
+                <h2>{annonce.location}</h2>
+            </div>
+            <div className="host">
+                {annonce.host.name}
+                <img src={annonce.host.picture} alt=""></img>
+            </div>
+            <div className="tags">
+                {annonce.tags.map((tag, index) => (
+                    <span key={index} className="tag">{tag}</span>
+                ))}
+            </div>
+            <div className="rating">
+                <StarRating rating={annonce.rating} />
+            </div>
+        </div>
+    )
 }
 
-const Fiche = () => {
-    const { id } = useParams();
-    const annonce = findAnnonceId(id);
-    const pictures = annonce.pictures;
-    return (
-        <>
-            <div className="info-logement">
-                <div className="title">
-                    <h1>{annonce.title}</h1>
-                    <h2>{annonce.location}</h2>
-                </div>
-                <div className="host">
-                    {annonce.host.name}
-                    <img src={annonce.host.picture} alt=""></img>
-                </div>
-                <div className="tags">
-                    {annonce.tags.map((tag, index) => (
-                        <span key={index} className="tag">{tag}</span>
-
-                    ))}
-                </div>
-                <p>{annonce.rating}</p>
-            </div>
-            <div className="carousel">
-                <Carousel showThumbs={false} showIndicators={false} renderStatus={(current, total) => `${current} / ${total}`}>
-                    {pictures.map((picture, index) => (
-                        <div className="slide" key={index}>
-                            <img src={picture} alt={`Slide ${index + 1}`} />
-                        </div>
-                    ))}
-                </Carousel>
-
-            </div>
-
-
-        </>
-    )
+Fiche.prototypes = {
+    annonce: PropTypes.object.isRequired,
 }
 
 export default Fiche

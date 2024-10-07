@@ -1,0 +1,85 @@
+.carrousel-container {
+    width: 1240px;
+    height: 415px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.carrousel-container button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.carrousel-container i {
+    height: 46px;
+    font-size: 76px;
+    padding-left: 23.36px;
+    padding-right: 23.36px;
+    border-radius: 0;
+}
+
+.carrousel-container .slide {
+    width: 100%;
+    max-height: 415px;
+    position: absolute;
+    transition: transform 0.1ms ease-in-out;
+}
+
+.slide .carrousel-image {
+    width: 100%;
+    max-height: 415px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.carrousel-counter {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    left: 0;
+
+}
+
+.carrousel-image {
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide.right {
+    animation: slideInRight 0.5s forwards;
+}
+
+.slide.left {
+    animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        /* Image entre de la droite */
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        /* Image entre de la gauche */
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}

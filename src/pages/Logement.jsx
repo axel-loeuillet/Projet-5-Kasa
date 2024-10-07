@@ -1,9 +1,38 @@
 import Fiche from "../components/Fiche"
+import { useParams, useNavigate } from "react-router-dom";
+import annonce from "../datas/annonces.json";
+import Collapse from "../components/Collapse";
+import Carrousel from "../components/Carrousel";
+
+
+const findAnnonceId = (id) => {
+    return annonce.find((annonce) => annonce.id === id);
+}
 
 const Logement = () => {
+    const { id } = useParams();
+    const annonce = findAnnonceId(id);
+    const pictures = annonce.pictures;
+    const equipmentsList = (
+        <ul>
+            {annonce.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+            ))}
+        </ul>
+    );
+
     return (
-        <div className="fiche-logement">
-            <Fiche />
+        <div className="info-logement">
+            <div className="info-logement">
+                <Carrousel pictures={annonce.pictures} />
+                <Fiche annonce={annonce} />
+                <div className="collapse-section">
+                    <Collapse title="Description" description={annonce.description} />
+                    <Collapse title="Équipements" description={equipmentsList} />
+                </div>
+
+            </div>
+
         </div>
     )
 }
