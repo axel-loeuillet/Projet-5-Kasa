@@ -1,23 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import PropTypes from "prop-types";
-import '../sass/carrousel.scss';
 
-const Carrousel = ({ pictures, autoScrollTime = 3000 }) => {
+const Carrousel = ({ pictures }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [slideDirection, setSlideDirection] = useState('');
     const totalImages = pictures.length;
-
-
     const handleNext = () => {
-        setSlideDirection('right');
         setCurrentIndex((prevIndex) => (prevIndex + 1) % totalImages);
     };
-
     const handlePrev = () => {
-        setSlideDirection('left');
         setCurrentIndex((prevIndex) => (prevIndex - 1 + totalImages) % totalImages);
     };
-
     return (
         <div className="carrousel-container">
             {totalImages > 1 && (

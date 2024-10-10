@@ -25,7 +25,6 @@ const Logement = () => {
     if (!annonce) {
         return null;
     }
-    const pictures = annonce.pictures;
     const equipmentsList = (
         <ul>
             {annonce.equipments.map((equipment, index) => (
