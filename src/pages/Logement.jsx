@@ -5,11 +5,9 @@ import annonce from "../datas/annonces.json";
 import Collapse from "../components/Collapse";
 import Carrousel from "../components/Carrousel";
 
-
 const findAnnonceId = (id) => {
     return annonce.find((annonce) => annonce.id === id);
 }
-
 const Logement = () => {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -32,7 +30,6 @@ const Logement = () => {
             ))}
         </ul>
     );
-
     return (
         <div className="info-logement">
             <div className="info-logement">

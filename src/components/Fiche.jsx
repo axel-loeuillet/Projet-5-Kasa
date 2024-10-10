@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-
 const StarRating = ({ rating }) => {
     const renderStars = () => {
         const stars = [];
@@ -15,7 +14,6 @@ const StarRating = ({ rating }) => {
     };
     return <div className="star-rating">{renderStars()}</div>;
 };
-
 
 const Fiche = ({ annonce }) => {
     return (

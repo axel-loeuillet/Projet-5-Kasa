@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 const Collapse = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
-
-
     const toggleCollapse = () => {
         setIsOpen(!isOpen);
     };
