@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Fiche from "../components/Fiche"
 import { useParams, useNavigate } from "react-router-dom";
 import annonce from "../datas/annonces.json";
@@ -11,7 +12,19 @@ const findAnnonceId = (id) => {
 
 const Logement = () => {
     const { id } = useParams();
+    const navigate = useNavigate();
     const annonce = findAnnonceId(id);
+
+    useEffect(() => {
+
+        if (!annonce) {
+            navigate('/error');
+        }
+    }, [annonce, navigate]);
+
+    if (!annonce) {
+        return null;
+    }
     const pictures = annonce.pictures;
     const equipmentsList = (
         <ul>

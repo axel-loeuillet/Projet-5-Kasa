@@ -11,18 +11,16 @@ const Collapse = ({ title, description }) => {
 
     return (
         <div className='collapse'>
-
-            <div className='collapse-bar'>
+            <div className='collapse-bar' onClick={toggleCollapse} >
                 {title}
-
-                <i className={`fa-solid ${isOpen ? 'fa-chevron-down' : 'fa-chevron-up'}`} onClick={toggleCollapse}></i>
-            </div>
-
-            {isOpen && (
-                <div className="collapse-content">
-                    {description}
+                <div className="icon-container">
+                    <i className={`fa-solid fa-chevron-down ${isOpen ? 'rotate' : ''}`}></i>
                 </div>
-            )}
+
+            </div>
+            <div className={`collapse-content ${isOpen ? 'open' : 'closed'}`}>
+                {description}
+            </div>
         </div>
     );
 };

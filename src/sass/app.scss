@@ -4,4 +4,24 @@
 
 * {
     font-family: "Montserrat", system-ui;
+    box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#main-content {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 40px;
+    box-sizing: border-box;
+}
+
+
+/*************** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {}
+
+@media (min-width: 320px) and (max-width: 768px) {}

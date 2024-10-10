@@ -3,13 +3,18 @@
     margin-bottom: 36px;
 }
 
+.section-collapse {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .collapse {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0;
     margin: 0;
-    margin-bottom: 36px;
 }
 
 .collapse-bar {
@@ -28,27 +33,42 @@
     padding: 0px 0px 0px 20px;
 }
 
-.collapse i {
-    cursor: pointer;
-    padding-right: 24px;
-}
-
 .collapse-content {
     width: 65%;
     background-color: rgba(246, 246, 246, 0.45);
-    transition: max-height 0.3s ease-out;
     border-radius: 5px;
     font-size: 18px;
     font-weight: 300;
     color: black;
-    padding: 25px 10px 20px 10px;
+    padding: 20px 10px 20px 10px;
+    max-height: 0;
+    /* Masquer le contenu par défaut */
+    overflow: hidden;
+    /* Empêche le débordement */
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    /* Transition pour max-height et opacity */
+    opacity: 0;
+    margin-bottom: 10px;
 }
 
-.collapse-bar .fa-solid:active {
-    transform: rotate(90deg);
-    transition: transform 80ms ease-in-out;
+.collapse-content.open {
+    max-height: 200px;
+    /* Ajuster selon la taille du contenu */
+    opacity: 1;
+    /* Opacité maximale */
+    transform: translateY(0);
+    /* Position d'origine */
 }
 
-.fa-solid {
-    color: white;
+.collapse i {
+    cursor: pointer;
+    margin-right: 24px;
+}
+
+.icon-container i {
+    transition: transform 0.4s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }

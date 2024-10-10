@@ -21,6 +21,7 @@
     padding-left: 23.36px;
     padding-right: 23.36px;
     border-radius: 0;
+    color: white;
 }
 
 .carrousel-container .slide {
@@ -60,26 +61,4 @@
 
 .slide.left {
     animation: slideInLeft 0.5s forwards;
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-        /* Image entre de la droite */
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-        /* Image entre de la gauche */
-    }
-
-    to {
-        transform: translateX(0);
-    }
 }

@@ -11,7 +11,6 @@ const About = () => {
                 {collapseData.map((data, i) => (
                     <Collapse key={i} title={data.title} description={data.content} />
                 ))}
-
             </div>
         </div>
     )
