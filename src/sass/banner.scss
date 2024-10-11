@@ -1,12 +1,10 @@
 .banner {
-    width: 1240px;
     height: 223px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 50px;
     border-radius: 25px;
     object-fit: cover;
 }
@@ -43,17 +41,14 @@
 }
 
 .about-banner {
-    width: 1240px;
     height: 223px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-top: 50px;
     border-radius: 25px;
     object-fit: cover;
-    margin-bottom: 38px;
 }
 
 .about-banner img {
@@ -74,4 +69,19 @@
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 25px;
     pointer-events: none;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .banner {
+        height: 111px;
+
+    }
+
+    .banner h1 {
+        font-size: 24px;
+        text-align: left;
+        margin-left: 16px;
+    }
 }

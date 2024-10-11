@@ -1,9 +1,5 @@
-.about .collapse {
-    display: flex;
-    margin-bottom: 36px;
-}
-
 .section-collapse {
+    margin: 38px 100px 18px 100px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -13,12 +9,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
     margin: 0;
 }
 
 .collapse-bar {
-    width: 65%;
+    width: 100%;
     color: white;
     background-color: rgba(255, 96, 96, 1);
     border-radius: 5px;
@@ -29,18 +24,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 28px;
+    gap: 8px;
     padding: 0px 0px 0px 20px;
 }
 
 .collapse-content {
-    width: 65%;
+    display: flex;
+    width: 100%;
     background-color: rgba(246, 246, 246, 0.45);
     border-radius: 5px;
     font-size: 18px;
     font-weight: 300;
     color: black;
-    padding: 20px 10px 20px 10px;
+    padding: 10px 10px 10px 15px;
     max-height: 0;
     /* Masquer le contenu par défaut */
     overflow: hidden;
@@ -48,10 +44,10 @@
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
     /* Transition pour max-height et opacity */
     opacity: 0;
-    margin-bottom: 10px;
 }
 
 .collapse-content.open {
+
     max-height: 200px;
     /* Ajuster selon la taille du contenu */
     opacity: 1;

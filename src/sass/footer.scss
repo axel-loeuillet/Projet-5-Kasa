@@ -17,3 +17,23 @@
     margin: 0;
     padding-bottom: 29px;
 }
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .footer {
+        display: flex;
+        align-content: center;
+        justify-content: flex-start;
+    }
+
+    .footer p {
+        width: 133.49px;
+        line-height: 17.11px;
+        font-weight: 500;
+        font-size: 12px;
+        display: flex;
+        text-align: center;
+        padding-top: 20px;
+    }
+}

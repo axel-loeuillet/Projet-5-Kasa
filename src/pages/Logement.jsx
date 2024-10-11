@@ -32,7 +32,7 @@ const Logement = () => {
     );
     return (
         <div className="info-logement">
-            <div className="info-logement">
+            <div>
                 <Carrousel pictures={annonce.pictures} />
                 <Fiche annonce={annonce} />
                 <div className="collapse-section">

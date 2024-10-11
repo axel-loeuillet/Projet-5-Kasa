@@ -17,22 +17,26 @@ const StarRating = ({ rating }) => {
 
 const Fiche = ({ annonce }) => {
     return (
-        <div className="info-logement">
-            <div className="title">
-                <h1>{annonce.title}</h1>
-                <h2>{annonce.location}</h2>
+        <div className="informations">
+            <div className="location-host">
+                <div className="title">
+                    <h1>{annonce.title}</h1>
+                    <h2>{annonce.location}</h2>
+                </div>
+                <div className="host">
+                    {annonce.host.name}
+                    <img src={annonce.host.picture} alt=""></img>
+                </div>
             </div>
-            <div className="host">
-                {annonce.host.name}
-                <img src={annonce.host.picture} alt=""></img>
-            </div>
-            <div className="tags">
-                {annonce.tags.map((tag, index) => (
-                    <span key={index} className="tag">{tag}</span>
-                ))}
-            </div>
-            <div className="rating">
-                <StarRating rating={annonce.rating} />
+            <div className="tags-rating">
+                <div className="tags">
+                    {annonce.tags.map((tag, index) => (
+                        <span key={index} className="tag">{tag}</span>
+                    ))}
+                </div>
+                <div className="rating">
+                    <StarRating rating={annonce.rating} />
+                </div>
             </div>
         </div>
     )

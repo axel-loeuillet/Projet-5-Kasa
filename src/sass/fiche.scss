@@ -1,7 +1,6 @@
 .fiche-logement {
     display: flex;
     flex-direction: column-reverse;
-    width: 1240px;
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -24,48 +23,37 @@
     border-radius: 25px;
 }
 
-.info-logement {
-    position: relative;
-    width: 1240px;
+.informations {
     display: flex;
     flex-direction: column;
-    width: 1240px;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 15px;
+}
+
+.location-host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .info-logement .title h1 {
     font-size: 36px;
     font-weight: 500;
     color: rgba(255, 96, 96, 1);
-    margin-bottom: 0px;
-    text-align: left;
-    margin-top: 0;
+    margin-bottom: 0;
 }
+
 
 .info-logement .title h2 {
     font-size: 18px;
     font-weight: 500;
     color: rgba(0, 0, 0, 1);
-    margin: 0;
-    margin-bottom: 20px;
-    margin-top: 5px;
+    margin-top: 5;
 }
 
 .info-logement .host {
-    position: absolute;
-    right: 0;
-    top: 0;
     color: rgba(255, 96, 96, 1);
     gap: 10px;
-}
-
-.host {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 24px;
 }
 
 .host img {
@@ -80,14 +68,14 @@
     border-radius: 10px;
     text-align: center;
     flex-wrap: nowrap;
-    margin-top: 20px;
+
 }
 
 .info-logement .tag {
     display: flex;
     justify-content: center;
-    align-content: center;
     align-items: center;
+    align-content: center;
     font-size: 14px;
     font-weight: 600;
     background-color: rgba(255, 96, 96, 1);
@@ -99,11 +87,14 @@
 }
 
 .info-logement .rating {
-    position: absolute;
-    right: 0;
-    top: 100px;
     font-size: 24px;
-    margin-top: 10px;
+}
+
+.tags-rating {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .fa-star {
@@ -123,15 +114,14 @@
 .collapse-section {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     gap: 80px;
-    max-width: 1240px;
     position: relative;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .collapse-section .collapse {
-    width: 1240px;
+    width: 50%;
 }
 
 .collapse-section .collapse-bar {
@@ -148,5 +138,6 @@
 
 .collapse-section ul {
     list-style-type: none;
-    padding: 0px;
+    padding: 0;
+    margin: 0;
 }

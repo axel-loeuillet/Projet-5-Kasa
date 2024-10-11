@@ -1,12 +1,11 @@
 .header {
-    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     justify-items: center;
     color: black;
     margin: auto;
-    margin-top: 45px;
+    margin: 45px 100px 50px 100px;
 }
 
 .header nav ul {
@@ -29,4 +28,29 @@
     font-weight: 500;
     line-height: 34.33px;
     color: black;
+}
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .header {
+        margin: 20px 20px 0px 20px;
+    }
+
+    .header img {
+        width: 145px;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 26px;
+    }
+
+    .header nav ul li {
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 400;
+    }
 }
