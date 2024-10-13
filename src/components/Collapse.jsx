@@ -12,7 +12,7 @@ const Collapse = ({ title, description }) => {
             <div className='collapse-bar' onClick={toggleCollapse} >
                 {title}
                 <div className="icon-container">
-                    <i className={`fa-solid fa-chevron-down ${isOpen ? 'rotate' : ''}`}></i>
+                    <i className={`fa-solid fa-chevron-up ${isOpen ? 'rotate' : ''}`}></i>
                 </div>
 
             </div>

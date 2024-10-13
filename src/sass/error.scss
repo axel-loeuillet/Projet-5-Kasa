@@ -24,3 +24,26 @@
     font-weight: 500;
     color: black;
 }
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 375px) and (max-width: 767px) {
+
+    .error {
+        margin-top: 113px;
+        margin-bottom: 113px;
+    }
+
+    .error h1 {
+        font-size: 96px;
+    }
+
+    .error p {
+        font-size: 18px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .error a {
+        font-size: 14px;
+    }
+}

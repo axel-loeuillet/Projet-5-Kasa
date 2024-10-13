@@ -16,7 +16,7 @@
     width: 100%;
     color: white;
     background-color: rgba(255, 96, 96, 1);
-    border-radius: 5px;
+    border-radius: 10px;
     height: 54px;
     font-size: 24px;
     font-weight: 600;
@@ -47,13 +47,14 @@
 }
 
 .collapse-content.open {
-
+    margin-bottom: 20px;
     max-height: 200px;
     /* Ajuster selon la taille du contenu */
     opacity: 1;
     /* Opacité maximale */
     transform: translateY(0);
     /* Position d'origine */
+
 }
 
 .collapse i {
@@ -67,4 +68,25 @@
 
 .rotate {
     transform: rotate(180deg);
+}
+
+/* Small devices (phones, less than 768px) */
+@media (min-width: 375px) and (max-width: 767px) {
+    .section-collapse {
+        display: flex;
+        margin: 0;
+        padding-top: 19px;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .collapse-bar {
+        height: 30px;
+        font-size: 13px;
+    }
+
+    .collapse-content.open {
+        max-height: 300px;
+        margin-bottom: 20px;
+    }
 }

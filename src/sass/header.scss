@@ -19,7 +19,7 @@
     text-decoration: none;
 
     &.underline {
-        text-decoration: underline black 2px;
+        text-decoration: underline black 1px;
     }
 }
 
@@ -35,6 +35,9 @@
 
     .header {
         margin: 20px 20px 0px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .header img {
