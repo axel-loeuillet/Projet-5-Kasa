@@ -111,12 +111,12 @@
 .star-rating {
     display: flex;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 10px;
     font-size: 24px;
 }
 
 .star-rating i {
-    font-size: 13px;
+    font-size: 18px;
 }
 
 .collapse-section {
@@ -203,14 +203,16 @@
     .rating {
         position: relative;
         margin-top: 24px;
-        margin-bottom: 20px;
+    }
+
+    .star-rating i {
+        font-size: 15px;
     }
 
     .star-rating {
         display: flex;
         justify-content: flex-start;
         gap: 5px;
-        font-size: 18px;
         margin: 0;
         order: 3;
     }
@@ -221,7 +223,6 @@
         display: flex;
         align-items: center;
         justify-content: flex-start;
-        margin-bottom: 20px;
         order: 3;
         font-size: 12px;
     }
@@ -236,8 +237,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 0;
-        margin-top: 0;
+        gap: 5px;
+        margin-top: 13px;
         margin-bottom: 0;
     }
 

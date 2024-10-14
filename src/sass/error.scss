@@ -25,6 +25,23 @@
     color: black;
 }
 
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    .error h1 {
+        font-size: 150px;
+    }
+
+    .error p {
+        font-size: 20px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .error a {
+        font-size: 14px;
+    }
+}
+
 /* Small devices (phones, less than 768px) */
 @media (min-width: 375px) and (max-width: 767px) {
 

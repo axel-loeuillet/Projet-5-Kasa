@@ -33,6 +33,7 @@
 .slide .carrousel-image {
     width: 100%;
     max-height: 415px;
+    min-height: 415px;
     object-fit: cover;
     border-radius: 25px;
 }
@@ -84,7 +85,8 @@
 
     .slide .carrousel-image {
         width: 100%;
-        max-height: 415px;
+        max-height: 255px;
+        min-height: 255px;
         object-fit: cover;
         border-radius: 10px;
     }

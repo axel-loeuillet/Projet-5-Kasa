@@ -12,7 +12,6 @@
     justify-content: center;
     align-content: center;
     gap: 60px;
-
 }
 
 .cards {
@@ -61,10 +60,46 @@
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
 
+    .gallery {
+        width: 100%;
+        margin: auto;
+        border-radius: 25px;
+        background-color: rgba(246, 246, 246, 1);
+        margin-top: 43px;
+        margin-bottom: 50px;
+        padding-top: 40px;
+        padding-bottom: 43px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        gap: 40px;
+    }
+
     .cards {
+        border-radius: 10px;
         width: 90%;
+        height: 340px;
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        align-items: end;
+        cursor: pointer;
+
+    }
+
+    .info-logement .title h1 {
+        font-size: 36px;
+        font-weight: 400;
+        color: rgb(255, 96, 96);
+        margin-bottom: 0;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
     }
 }
+
 
 
 /* Small devices (phones, less than 768px) */
