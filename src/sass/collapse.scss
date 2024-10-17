@@ -38,11 +38,8 @@
     color: black;
     padding: 10px 10px 10px 15px;
     max-height: 0;
-    /* Masquer le contenu par défaut */
     overflow: hidden;
-    /* Empêche le débordement */
     transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    /* Transition pour max-height et opacity */
     opacity: 0;
 }
 
