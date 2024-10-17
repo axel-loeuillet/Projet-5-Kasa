@@ -7,13 +7,17 @@
     box-sizing: border-box;
 }
 
-.root {
-    max-width: 1140px;
+body {
+    display: flex;
+    justify-content: center;
+}
+
+#root {
+    max-width: 1440px;
 }
 
 #main-content {
-    width: 100%;
-    padding: 0 100px 0 100px;
+    max-width: 100%;
     box-sizing: border-box;
 }
 
